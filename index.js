@@ -6,6 +6,7 @@ const connectDB = require("./config/mongoose-connection.js");
 const cookieParser = require("cookie-parser");
 const authRoutes = require("./routes/authRoutes.js");
 
+require("dotenv").config();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true })); // Parse URL-encoded bodies (as sent by HTML forms)
 app.use(cookieParser()); // Parse cookies from the HTTP Request
